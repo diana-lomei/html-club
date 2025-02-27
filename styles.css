@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+  background-color: #f4f4f4; /* Light background */
+  color: #333333; /* Dark text */
+}
+
+h1, h2, h3 {
+  color: #111111; /* Darker text for headers */
+}
+
+/* Font Styles */
+.p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1.display-5, h3 {
+  font-family: 'Itim', sans-serif;
+}
+
+p.lead {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/* Button and Navigation Styles */
+button.btn-primary {
+  font-family: 'Irish Grover', cursive;
+  color: black;
+  background-color: #E5989B;
+  border-color: #E5989B;
+  padding: 15px 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button.btn-primary:hover {
+  background-color: #D27D8D;
+  border-color: #D27D8D;
+}
+
+.custom-btn {
+  background-color: #FFB4A2;
+  border-radius: 15px;
+  color: #000;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.custom-btn:focus {
+  outline: 2px solid #FFB4A2;
+  outline-offset: 2px;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: #FF8C6B; /* Darker shade on hover */
+  border-radius: 25px;
+}
+
+/* Sticky Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+/* Navbar and Pills */
+.nav-pills {
+  flex-wrap: wrap;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #FFB4A2 !important;
+  border-color: #FFB4A2 !important;
+  color: white !important;
+}
+
+.nav-pills .nav-link {
+  color: #FFB4A2 !important;
+}
+
+.nav-pills .nav-link:hover {
+  color: #D27D8D !important;
+}
+
+/* Icons and Images */
+.icons {
+  height: 200px;
+}
+
+.feature-icon {
+  background-color: #E5989B !important;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  fill: #FFCDB2  !important;
+}
+
+.book-card img {
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Stats Card */
+.stats-card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Book Card */
+.book-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+  will-change: transform;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Accordion Styles */
+.accordion-button {
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #FF8C6B;
+  border-radius: 25px;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+.accordion-body {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 0s 1s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-out;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
